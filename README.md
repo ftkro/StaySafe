@@ -5,6 +5,7 @@ ENT APP DEV PROJ
 [![CodeQL](https://github.com/ftkro/StaySafe/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/ftkro/StaySafe/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/ftkro/staysafe/badge)](https://www.codefactor.io/repository/github/ftkro/staysafe)
 [![Lint Code Base](https://github.com/ftkro/StaySafe/actions/workflows/superlinter.yml/badge.svg)](https://github.com/ftkro/StaySafe/actions/workflows/superlinter.yml)
+[![Java CI](https://github.com/ftkro/StaySafe/actions/workflows/maven.yml/badge.svg)](https://github.com/ftkro/StaySafe/actions/workflows/maven.yml)
 ## Proposed policy
 From Takuro
 - Use GitHub Actions to perform automated code analysis
