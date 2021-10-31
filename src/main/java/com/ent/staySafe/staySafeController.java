@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/checkin")
-public class staySafeController {
 
+public class staySafeController {
+	@RequestMapping("/staySafe")
+	public String start() {
+		
+		return "staySafe";
 }
