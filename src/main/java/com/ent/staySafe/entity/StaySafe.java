@@ -43,6 +43,7 @@ public class StaySafe {
 		this.checkoutDate = checkoutDate;
 	}
 
+	public StaySafe(){};
 
 	public int getId() {
 		return id;
