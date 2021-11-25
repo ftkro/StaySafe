@@ -28,19 +28,19 @@ public class StaySafe {
 	private String roomNumber;
 	
 	@Column(name="checkin_Date")
-	private String checkinDate;
+	private String checkInDate;
 	
 	@Column(name="checkout_Date")
-	private String checkoutDate;
+	private String checkOutDate;
 	
 	
-	public StaySafe(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate) {
+	public StaySafe(int id, String firstName, String lastName, String roomNumber, String checkInDate, String checkOutDate) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.roomNumber = roomNumber;
-		this.checkinDate = checkinDate;
-		this.checkoutDate = checkoutDate;
+		this.checkInDate = checkInDate;
+		this.checkOutDate = checkOutDate;
 	}
 
 
@@ -84,23 +84,23 @@ public class StaySafe {
 	}
 
 
-	public String getCheckinDate() {
-		return checkinDate;
+	public String getCheckInDate() {
+		return checkInDate;
 	}
 
 
-	public void setCheckinDate(String checkinDate) {
-		this.checkinDate = checkinDate;
+	public void setCheckInDate(String checkinDate) {
+		this.checkInDate = checkInDate;
 	}
 
 
-	public String getCheckoutDate() {
-		return checkoutDate;
+	public String getCheckOutDate() {
+		return checkOutDate;
 	}
 
 
-	public void setCheckoutDate(String checkoutDate) {
-		this.checkoutDate = checkoutDate;
+	public void setCheckoutDate(String checkOutDate) {
+		this.checkOutDate = checkOutDate;
 	}
 	
 	
