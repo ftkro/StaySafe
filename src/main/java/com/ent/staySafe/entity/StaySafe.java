@@ -24,6 +24,17 @@ public class StaySafe {
 	@Column(name="last_name")
 	private String lastName;
 	
+	/*
+	 * @Column(name="food_pref")
+	private String foodPref;
+	 */
+	
+	/*
+	 * @Column(name="Allergies")
+	private String Allergies;
+	 */
+	
+	
 	@Column(name="room_number")
 	private String roomNumber;
 	
@@ -34,10 +45,17 @@ public class StaySafe {
 	private String checkoutDate;
 	
 	
-	public StaySafe(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate) {
+	public StaySafe(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate)
+	{
+		//Add respective Strings for food and allergies above
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		
+		//this.foodPref = foodPref;
+		//this.Allergies= Allergies;
+		
 		this.roomNumber = roomNumber;
 		this.checkinDate = checkinDate;
 		this.checkoutDate = checkoutDate;
@@ -77,6 +95,25 @@ public class StaySafe {
 	public String getRoomNumber() {
 		return roomNumber;
 	}
+	
+	
+	/*Food preference
+	 * 
+	 * public void setFoodPref(String foodPref) {
+		this.foodPref = foodPref;
+	}
+	 */
+	
+	
+	/*Allergies 
+	 *
+	 * 
+	 * public void setAllergies(String Allergies) {
+		this.Allergies = Allergies;
+	}
+	 */
+	 
+	
 
 
 	public void setRoomNumber(String roomNumber) {
