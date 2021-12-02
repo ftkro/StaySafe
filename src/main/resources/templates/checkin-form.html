@@ -16,41 +16,49 @@
 
 <div class="container">
 
-<h4>Check in</h4>
-
 <!-- todo: route this to home page -->
-<a class="btn btn-primary" data-bs-toggle="collapse" th:href="@{/home}" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Return
-  </a>
 
 <p class="h4 mb-4">Check in to Room</p>
 
 <!-- todo: route this service -->
-<form action="#" th:action="@{/Rooms/save}" th:object="${Room}" method="POST">
+<form action="#" th:action="@{/staySafe/save}" th:object="${stay}" method="POST">
 
 <!-- invisible form as needed to update info -->
+
 <input type="hidden" th:field="*{id}"/>
 
+<label for="fname">First Name</label>
 <input type="text" th:field="*{firstName}"
-class="form-control mb4 col-4" placeholder="First Name">
+class="form-control mb4 col-4" id="fname" placeholder="">
 
+<label for="lname">Last Name</label>
 <input type="text" th:field="*{lastName}"
-class="form-control mb4 col-4" placeholder="Last Name">
+class="form-control mb4 col-4" id="lname" placeholder="">
 
+<label for="aler">Enter any allergies</label>
+<input type="text" th:field="*{allergies}"
+class="form-control mb4 col-4" id="aler" placeholder="eg: peanuts, ">
+
+<label for="room">Preferred room number</label>
 <input type="text" th:field="*{roomNumber}"
-class="form-control mb4 col-4" placeholder="Room number (eg: 302)">
+class="form-control mb4 col-4" id="room" placeholder="Room number (eg: 302)">
 
+<label for="date1">Check-in Date</label>
 <input type="text" th:field="*{checkinDate}"
-class="form-control mb4 col-4" placeholder="April 12">
+class="form-control mb4 col-4" id="date1" placeholder="MM/DD/YYY">
 
+<label for="date1">Check-out Date</label>
 <input type="text" th:field="*{checkoutDate}"
-class="form-control mb4 col-4" placeholder="April 16">
+class="form-control mb4 col-4" id="date2" placeholder="MM/DD/YYY">
 
 
-<button type="submit" class="btn btn-danger col-2">Register</button>
+<button type="submit" class="btn btn-success col-1">Register</button>
+<button type="reset" class="btn btn-danger col-1" value="Reset">Reset</button>
 
 </form>
-
+<a class="btn btn-primary" data-bs-toggle="collapse" th:href="@{/staySafe/home}" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Return
+  </a>
 
 
 </div>
