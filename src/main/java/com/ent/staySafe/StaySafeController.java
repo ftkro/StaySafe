@@ -40,13 +40,13 @@ public class StaySafeController {
 	}
 	
 	@PostMapping("/save")
-	public String saveFaculty(@ModelAttribute("stay") Stay theStay) {
+	public String saveStay(@ModelAttribute("stay") Stay theStay) {
 		
 		//register the faculty
 		staySafeService.save(theStay);
 		
 		//block duplicate submission for accidental page refresh
-		return "redirect:/Faculties/List";
+		return "redirect:/staySafe/home";
 		
 	}
 }
