@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="StaySafe")
-public class StaySafe {
+@Table(name="Stay")
+public class Stay {
 
 	
 	@Id
@@ -34,7 +34,7 @@ public class StaySafe {
 	private String checkoutDate;
 	
 	
-	public StaySafe(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate) {
+	public Stay(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -102,6 +102,14 @@ public class StaySafe {
 	public void setCheckoutDate(String checkoutDate) {
 		this.checkoutDate = checkoutDate;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Stay [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", roomNumber=" + roomNumber
+				+ ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate + "]";
+	}
+	
 	
 	
 }

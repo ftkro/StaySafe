@@ -19,17 +19,18 @@
 <h4>Check in</h4>
 
 <!-- todo: route this to home page -->
-<a class="btn btn-primary" data-bs-toggle="collapse" th:href="@{/home}" role="button" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-primary" data-bs-toggle="collapse" th:href="@{/staySafe/home}" role="button" aria-expanded="false" aria-controls="collapseExample">
     Return
   </a>
 
 <p class="h4 mb-4">Check in to Room</p>
 
 <!-- todo: route this service -->
-<form action="#" th:action="@{/Rooms/save}" th:object="${Room}" method="POST">
+<form action="#" th:action="@{/Rooms/save}" th:object="${stay}" method="POST">
 
 <!-- invisible form as needed to update info -->
-<input type="hidden" th:field="*{id}"/>
+
+<!--  <input type="hidden" th:field="*{id}"/> -->
 
 <input type="text" th:field="*{firstName}"
 class="form-control mb4 col-4" placeholder="First Name">
