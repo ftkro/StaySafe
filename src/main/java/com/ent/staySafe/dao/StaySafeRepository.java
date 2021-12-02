@@ -10,6 +10,6 @@ import com.ent.staySafe.entity.Stay;
 public interface StaySafeRepository extends JpaRepository<Stay, Integer> {
 	
 	//method to sort results by last name in ascending order
-//	public List<Stay>findAllByOrderByLastNameAsc();
+	public List<Stay>findAllByOrderByLastNameAsc();
 
 }

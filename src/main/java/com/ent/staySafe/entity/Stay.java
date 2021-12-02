@@ -27,16 +27,6 @@ public class Stay {
 	@Column(name="allergies")
 	private String allergies;
 	
-	public String getAllergies() {
-		return allergies;
-	}
-
-
-	public void setAllergies(String allergies) {
-		this.allergies = allergies;
-	}
-
-
 	@Column(name="room_number")
 	private String roomNumber;
 	
@@ -46,6 +36,10 @@ public class Stay {
 	@Column(name="checkout_Date")
 	private String checkoutDate;
 	
+	
+	public Stay () {
+		
+	}
 	
 	public Stay(int id, String firstName, String lastName, String roomNumber, String allergies, String checkinDate, String checkoutDate) {
 		this.id = id;
@@ -96,6 +90,17 @@ public class Stay {
 	public void setRoomNumber(String roomNumber) {
 		this.roomNumber = roomNumber;
 	}
+	
+	public String getAllergies() {
+		return allergies;
+	}
+
+	
+	public void setAllergies(String allergies) {
+		this.allergies = allergies;
+	}
+
+
 
 
 	public String getCheckinDate() {

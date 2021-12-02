@@ -1,5 +1,7 @@
 package com.ent.staySafe;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +25,14 @@ public class StaySafeController {
 	
 	
 	@GetMapping("/home")
-	public String start() {
+	public String start(Model theModel) {
+		
+		//Retrieve stays from database
+		List<Stay> theStays = staySafeService.findAll();
+				
+				
+		//add stay to the spring model
+		theModel.addAttribute("stay", theStays);
 		
 		return "staySafe";
 	}
@@ -42,7 +51,7 @@ public class StaySafeController {
 	@PostMapping("/save")
 	public String saveStay(@ModelAttribute("stay") Stay theStay) {
 		
-		//register the faculty
+		//register the stay
 		staySafeService.save(theStay);
 		
 		//block duplicate submission for accidental page refresh

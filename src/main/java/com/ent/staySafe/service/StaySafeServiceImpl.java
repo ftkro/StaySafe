@@ -1,5 +1,7 @@
 package com.ent.staySafe.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,11 @@ public class StaySafeServiceImpl implements StaySafeService  {
 	public void save(Stay theStay) {
 		staySafeRepository.save(theStay);
 
+	}
+	
+	@Override
+	public List<Stay> findAll() {
+		// TODO Auto-generated method stub
+		return staySafeRepository.findAllByOrderByLastNameAsc();
 	}
 }
