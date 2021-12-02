@@ -8,11 +8,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ent.staySafe.entity.Stay;
-import com.soit.soitfaculty.entity.Faculty;
+import com.ent.staySafe.service.StaySafeService;
 
 @Controller
 @RequestMapping("/staySafe")
-public class staySafeController {
+public class StaySafeController {
+	
+	
+	public StaySafeService staySafeService;
+	
+	public StaySafeController(StaySafeService theStaySafeService) {
+		staySafeService = theStaySafeService;
+	}
+	
+	
 	@GetMapping("/home")
 	public String start() {
 		
@@ -31,10 +40,10 @@ public class staySafeController {
 	}
 	
 	@PostMapping("/save")
-	public String saveFaculty(@ModelAttribute("faculty") Faculty theFaculty) {
+	public String saveFaculty(@ModelAttribute("stay") Stay theStay) {
 		
 		//register the faculty
-		facultyService.save(theFaculty);
+		staySafeService.save(theStay);
 		
 		//block duplicate submission for accidental page refresh
 		return "redirect:/Faculties/List";

@@ -7,7 +7,7 @@ import com.ent.staySafe.dao.StaySafeRepository;
 import com.ent.staySafe.entity.Stay;
 
 @Service
-public class StaySafeServiceImpl {
+public class StaySafeServiceImpl implements StaySafeService  {
 	
 	private StaySafeRepository staySafeRepository;
 	
