@@ -8,15 +8,21 @@
 <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
 
     
 <title>Stay Safe</title>
 </head>
 <body>
 	<div class="container">
-	<a th:href='@{/staySafe/checkin-form}' class="btn btn-dark btn-sm mb-2">Check In</a>
-		<h4>Patient Information</h4>
+		<h1>Welcome to StaySafe</h1>
 		<hr>
+		<p>To get started with your Quarantine click the button beloew</p>
+		<a th:href='@{/staySafe/checkin-form}' class="btn btn-dark btn-sm mb-2">Check In</a>
+		<!--
 		<table class="table table-bordered">
 			<thead>
 				<tr class="bg-danger">
@@ -29,6 +35,7 @@
 			</thead>
 
 		</table>
+		-->
 	</div>
 </body>
 </html>
