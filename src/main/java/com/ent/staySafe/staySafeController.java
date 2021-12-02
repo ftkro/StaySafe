@@ -3,9 +3,12 @@ package com.ent.staySafe;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ent.staySafe.entity.Stay;
+import com.soit.soitfaculty.entity.Faculty;
 
 @Controller
 @RequestMapping("/staySafe")
@@ -25,5 +28,16 @@ public class staySafeController {
 		theModel.addAttribute("stay", theStay);
 		
 		return "checkin-form";
+	}
+	
+	@PostMapping("/save")
+	public String saveFaculty(@ModelAttribute("faculty") Faculty theFaculty) {
+		
+		//register the faculty
+		facultyService.save(theFaculty);
+		
+		//block duplicate submission for accidental page refresh
+		return "redirect:/Faculties/List";
+		
 	}
 }
