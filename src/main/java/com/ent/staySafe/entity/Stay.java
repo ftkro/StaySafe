@@ -24,6 +24,19 @@ public class Stay {
 	@Column(name="last_name")
 	private String lastName;
 	
+	@Column(name="allergies")
+	private String allergies;
+	
+	public String getAllergies() {
+		return allergies;
+	}
+
+
+	public void setAllergies(String allergies) {
+		this.allergies = allergies;
+	}
+
+
 	@Column(name="room_number")
 	private String roomNumber;
 	
@@ -34,11 +47,12 @@ public class Stay {
 	private String checkoutDate;
 	
 	
-	public Stay(int id, String firstName, String lastName, String roomNumber, String checkinDate, String checkoutDate) {
+	public Stay(int id, String firstName, String lastName, String roomNumber, String allergies, String checkinDate, String checkoutDate) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.roomNumber = roomNumber;
+		this.allergies = allergies;
 		this.checkinDate = checkinDate;
 		this.checkoutDate = checkoutDate;
 	}
@@ -106,9 +120,12 @@ public class Stay {
 
 	@Override
 	public String toString() {
-		return "Stay [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", roomNumber=" + roomNumber
-				+ ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate + "]";
+		return "Stay [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", allergies=" + allergies
+				+ ", roomNumber=" + roomNumber + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
+				+ "]";
 	}
+
+
 	
 	
 	

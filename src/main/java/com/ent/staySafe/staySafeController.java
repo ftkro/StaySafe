@@ -20,7 +20,7 @@ public class staySafeController {
 	public String viewCheckIn(Model theModel) {
 		
 		//model attribute for data binding
-		Stay theStay = new Stay(0, null, null, null, null, null);
+		Stay theStay = new Stay(0, null, null, null, null, null, null);
 		
 		theModel.addAttribute("stay", theStay);
 		
